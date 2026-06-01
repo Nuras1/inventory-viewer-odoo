@@ -16,15 +16,13 @@
         <field name="arch"
                type="xml">
 
-            <tree>
+            <list>
 
-                <field name="name"/>
+    <field name="name"/>
+    <field name="category"/>
+    <field name="items_count"/>
 
-                <field name="category"/>
-
-                <field name="items_count"/>
-
-            </tree>
+</list>
 
         </field>
 
@@ -80,8 +78,8 @@
         </field>
 
         <field name="view_mode">
-            tree,form
-        </field>
+    list,form
+</field>
 
     </record>
 
