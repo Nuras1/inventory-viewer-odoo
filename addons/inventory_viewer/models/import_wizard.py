@@ -22,10 +22,11 @@ class InventoryImportWizard(models.TransientModel):
         data = response.json()
 
         inventory = self.env["inventory.viewer"].create({
-            "name": data.get("title"),
-            "category": data.get("category"),
-            "items_count": data.get("itemsCount"),
-        })
+                "name": data.get("title"),
+                "category": data.get("category"),
+                "items_count": data.get("itemsCount"),
+                "api_token": self.api_token
+            })
 
         for field in data.get("fields", []):
 

@@ -2,24 +2,27 @@
 
 <odoo>
 
-<record id="inventory_viewer_list"
-        model="ir.ui.view">
+    <record id="inventory_viewer_list"
+            model="ir.ui.view">
 
-    <field name="name">inventory.viewer.list</field>
+        <field name="name">inventory.viewer.list</field>
 
-    <field name="model">inventory.viewer</field>
+        <field name="model">inventory.viewer</field>
 
-    <field name="arch" type="xml">
+        <field name="arch" type="xml">
 
-        <list>
-            <field name="name"/>
-            <field name="category"/>
-            <field name="items_count"/>
-        </list>
+            <list>
 
-    </field>
+                <field name="name"/>
+                <field name="category"/>
+                <field name="items_count"/>
 
-</record>
+            </list>
+
+        </field>
+
+    </record>
+
 
     <record id="inventory_viewer_form"
             model="ir.ui.view">
@@ -28,62 +31,69 @@
 
         <field name="model">inventory.viewer</field>
 
-        <field name="arch"
-               type="xml">
+        <field name="arch" type="xml">
 
             <form>
 
-    <sheet>
+                <sheet>
 
-        <group>
-
-            <field name="name"/>
-            <field name="category"/>
-            <field name="items_count"/>
-
-        </group>
-
-        <notebook>
-
-            <page string="Fields">
-
-                <field name="field_ids">
-
-                    <list>
+                    <group>
 
                         <field name="name"/>
-                        <field name="field_type"/>
 
-                    </list>
+                        <field name="category"/>
 
-                </field>
+                        <field name="items_count"/>
 
-            </page>
+                        <field name="api_token"
+                               readonly="1"/>
 
-            <page string="Aggregates">
+                    </group>
 
-                <field name="aggregate_ids">
+                    <notebook>
 
-                    <list>
+                        <page string="Fields">
 
-                        <field name="field_name"/>
-                        <field name="value"/>
+                            <field name="field_ids">
 
-                    </list>
+                                <list>
 
-                </field>
+                                    <field name="name"/>
 
-            </page>
+                                    <field name="field_type"/>
 
-        </notebook>
+                                </list>
 
-    </sheet>
+                            </field>
 
-</form>
+                        </page>
+
+                        <page string="Aggregates">
+
+                            <field name="aggregate_ids">
+
+                                <list>
+
+                                    <field name="field_name"/>
+
+                                    <field name="value"/>
+
+                                </list>
+
+                            </field>
+
+                        </page>
+
+                    </notebook>
+
+                </sheet>
+
+            </form>
 
         </field>
 
     </record>
+
 
     <record id="inventory_viewer_action"
             model="ir.actions.act_window">
@@ -96,29 +106,34 @@
 
     </record>
 
+
+    <record id="inventory_import_action"
+            model="ir.actions.act_window">
+
+        <field name="name">Import Inventory</field>
+
+        <field name="res_model">inventory.import.wizard</field>
+
+        <field name="view_mode">form</field>
+
+        <field name="target">new</field>
+
+    </record>
+
+
     <menuitem id="inventory_viewer_root"
               name="Inventory Viewer"/>
 
     <menuitem id="inventory_viewer_menu"
               parent="inventory_viewer_root"
               action="inventory_viewer_action"
-              name="Inventories"/>
+              name="Inventories"
+              sequence="10"/>
 
-    <record id="inventory_import_action"
-              model="ir.actions.act_window">
+    <menuitem id="inventory_import_menu"
+              parent="inventory_viewer_root"
+              action="inventory_import_action"
+              name="Import Inventory"
+              sequence="20"/>
 
-    <field name="name">Import Inventory</field>
-    <field name="res_model">inventory.import.wizard</field>
-    <field name="view_mode">form</field>
-    <field name="target">new</field>
-
-    </record>
-
-<menuitem
-    id="inventory_import_menu"
-    parent="inventory_viewer_root"
-    action="inventory_import_action"
-    name="Import Inventory"
-    sequence="20"/>
-    
 </odoo>

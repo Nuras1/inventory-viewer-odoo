@@ -13,8 +13,10 @@
             <form string="Import Inventory">
 
                 <group>
+
                     <field name="api_token"
-                           placeholder="https://your-api.com/api/inventory?token=123"/>
+                           placeholder="Paste API Token here"/>
+
                 </group>
 
                 <footer>
