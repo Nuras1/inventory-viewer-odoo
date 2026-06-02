@@ -37,21 +37,4 @@
 
     </record>
 
-    <record id="inventory_import_action"
-            model="ir.actions.act_window">
-
-        <field name="name">Import Inventory</field>
-        <field name="res_model">inventory.import.wizard</field>
-        <field name="view_mode">form</field>
-        <field name="target">new</field>
-
-    </record>
-
-    <menuitem
-        id="inventory_import_menu"
-        parent="inventory_viewer_root"
-        action="inventory_import_action"
-        name="Import Inventory"
-        sequence="20"/>
-
 </odoo>

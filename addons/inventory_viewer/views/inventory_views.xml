@@ -120,4 +120,5 @@
     action="inventory_import_action"
     name="Import Inventory"
     sequence="20"/>
+    
 </odoo>
