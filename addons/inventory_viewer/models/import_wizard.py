@@ -8,3 +8,6 @@ class InventoryImportWizard(models.TransientModel):
     api_url = fields.Char(
         required=True
     )
+
+    def action_import(self):
+        return True

@@ -3,7 +3,8 @@
     "version": "1.0",
     "depends": ["base"],
     "data": [
-        "security/ir.model.access.csv"
+        "security/ir.model.access.csv",
+        "views/import_wizard_views.xml"
     ],
     "installable": True,
     "application": True
