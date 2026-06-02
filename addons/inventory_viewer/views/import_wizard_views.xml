@@ -2,26 +2,20 @@
 
 <odoo>
 
+    <!-- Wizard Form -->
     <record id="inventory_import_wizard_form"
             model="ir.ui.view">
 
-        <field name="name">
-            inventory.import.wizard.form
-        </field>
+        <field name="name">inventory.import.wizard.form</field>
+        <field name="model">inventory.import.wizard</field>
 
-        <field name="model">
-            inventory.import.wizard
-        </field>
-
-        <field name="arch"
-               type="xml">
+        <field name="arch" type="xml">
 
             <form string="Import Inventory">
 
                 <group>
-
-                    <field name="api_url"/>
-
+                    <field name="api_url"
+                           placeholder="https://your-api.com/api/inventory?token=123"/>
                 </group>
 
                 <footer>
@@ -47,22 +41,18 @@
     <record id="inventory_import_action"
             model="ir.actions.act_window">
 
-        <field name="name">
-            Import Inventory
-        </field>
-
-        <field name="res_model">
-            inventory.import.wizard
-        </field>
-
-        <field name="view_mode">
-            form
-        </field>
-
-        <field name="target">
-            new
-        </field>
+        <field name="name">Import Inventory</field>
+        <field name="res_model">inventory.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
 
     </record>
+
+    <menuitem
+        id="inventory_import_menu"
+        parent="inventory_viewer_root"
+        action="inventory_import_action"
+        name="Import Inventory"
+        sequence="20"/>
 
 </odoo>

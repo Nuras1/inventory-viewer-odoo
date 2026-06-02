@@ -1,5 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_inventory_viewer,inventory.viewer,model_inventory_viewer,,1,1,1,1
-access_inventory_import_wizard,inventory.import.wizard,model_inventory_import_wizard,,1,1,1,1
 access_inventory_viewer_field,inventory.viewer.field,model_inventory_viewer_field,,1,1,1,1
 access_inventory_viewer_aggregate,inventory.viewer.aggregate,model_inventory_viewer_aggregate,,1,1,1,1
