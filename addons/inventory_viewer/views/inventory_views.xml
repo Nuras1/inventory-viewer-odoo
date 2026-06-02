@@ -39,11 +39,11 @@
 
                     <group>
 
-                        <field name="name"/>
+                        <field name="name" readonly="1"/>
 
-                        <field name="category"/>
-
-                        <field name="items_count"/>
+                        <field name="category" readonly="1"/>
+                        
+                        <field name="items_count" readonly="1"/>
 
                         <field name="api_token"
                                readonly="1"/>
@@ -54,13 +54,14 @@
 
                         <page string="Fields">
 
-                            <field name="field_ids">
+                            <field name="field_ids" readonly="1">
 
-                                <list>
+                                <list create="false"
+                                        edit="false"
+                                        delete="false">
 
-                                    <field name="name"/>
-
-                                    <field name="field_type"/>
+                                        <field name="name"/>
+                                        <field name="field_type"/>
 
                                 </list>
 
@@ -70,13 +71,14 @@
 
                         <page string="Aggregates">
 
-                            <field name="aggregate_ids">
+                            <field name="aggregate_ids" readonly="1">
 
-                                <list>
+                                <list create="false"
+                                edit="false"
+                                delete="false">
 
-                                    <field name="field_name"/>
-
-                                    <field name="value"/>
+                                <field name="field_name"/>
+                                <field name="value"/>
 
                                 </list>
 
