@@ -33,21 +33,53 @@
 
             <form>
 
-                <sheet>
+    <sheet>
 
-                    <group>
+        <group>
+
+            <field name="name"/>
+            <field name="category"/>
+            <field name="items_count"/>
+
+        </group>
+
+        <notebook>
+
+            <page string="Fields">
+
+                <field name="field_ids">
+
+                    <list>
 
                         <field name="name"/>
+                        <field name="field_type"/>
 
-                        <field name="category"/>
+                    </list>
 
-                        <field name="items_count"/>
+                </field>
 
-                    </group>
+            </page>
 
-                </sheet>
+            <page string="Aggregates">
 
-            </form>
+                <field name="aggregate_ids">
+
+                    <list>
+
+                        <field name="field_name"/>
+                        <field name="value"/>
+
+                    </list>
+
+                </field>
+
+            </page>
+
+        </notebook>
+
+    </sheet>
+
+</form>
 
         </field>
 
