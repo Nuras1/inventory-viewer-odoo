@@ -6,11 +6,18 @@ class InventoryImportWizard(models.TransientModel):
     _name = "inventory.import.wizard"
     _description = "Import Inventory"
 
-    api_url = fields.Char(required=True)
+    api_token = fields.Char(
+    string="API Token",
+    required=True
+)
 
     def action_import(self):
 
-        response = requests.get(self.api_url)
+        url = ("https://inventory-app-igzz.onrender.com"
+               f"/api/v1/inventory/{self.api_token}"
+               )
+
+        response = requests.get(url)
 
         data = response.json()
 

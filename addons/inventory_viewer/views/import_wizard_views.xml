@@ -2,7 +2,6 @@
 
 <odoo>
 
-    <!-- Wizard Form -->
     <record id="inventory_import_wizard_form"
             model="ir.ui.view">
 
@@ -14,7 +13,7 @@
             <form string="Import Inventory">
 
                 <group>
-                    <field name="api_url"
+                    <field name="api_token"
                            placeholder="https://your-api.com/api/inventory?token=123"/>
                 </group>
 
