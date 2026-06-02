@@ -10,5 +10,3 @@ class InventoryViewer(models.Model):
     category = fields.Char()
 
     items_count = fields.Integer()
-
-    api_token = fields.Char()

@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <odoo>
 
     <record id="inventory_import_wizard_form"
             model="ir.ui.view">
 
-        <field name="name">inventory.import.wizard.form</field>
+        <field name="name">
+            inventory.import.wizard.form
+        </field>
 
-        <field name="model">inventory.import.wizard</field>
+        <field name="model">
+            inventory.import.wizard
+        </field>
 
-        <field name="arch" type="xml">
+        <field name="arch"
+               type="xml">
 
             <form string="Import Inventory">
 
@@ -20,13 +26,15 @@
 
                 <footer>
 
-                    <button name="action_import"
-                            string="Import"
-                            type="object"
-                            class="btn-primary"/>
+                    <button
+                        name="action_import"
+                        string="Import"
+                        type="object"
+                        class="btn-primary"/>
 
-                    <button string="Cancel"
-                            special="cancel"/>
+                    <button
+                        string="Cancel"
+                        special="cancel"/>
 
                 </footer>
 
@@ -39,16 +47,22 @@
     <record id="inventory_import_action"
             model="ir.actions.act_window">
 
-        <field name="name">Import Inventory</field>
+        <field name="name">
+            Import Inventory
+        </field>
 
-        <field name="res_model">inventory.import.wizard</field>
+        <field name="res_model">
+            inventory.import.wizard
+        </field>
 
-        <field name="view_mode">form</field>
+        <field name="view_mode">
+            form
+        </field>
 
-        <field name="target">new</field>
+        <field name="target">
+            new
+        </field>
 
     </record>
-<menuitem id="inventory_import_menu"
-          name="Import Inventory"
-          action="inventory_import_action"/>
+
 </odoo>
