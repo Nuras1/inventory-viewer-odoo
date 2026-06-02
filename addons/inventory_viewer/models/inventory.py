@@ -18,7 +18,6 @@ class InventoryViewer(models.Model):
         "inventory_id"
     )
 
-
 class InventoryViewerField(models.Model):
     _name = "inventory.viewer.field"
 
@@ -28,7 +27,6 @@ class InventoryViewerField(models.Model):
 
     name = fields.Char()
     field_type = fields.Char()
-
 
 class InventoryViewerAggregate(models.Model):
     _name = "inventory.viewer.aggregate"

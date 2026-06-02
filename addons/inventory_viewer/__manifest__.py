@@ -9,7 +9,6 @@
         "views/inventory_views.xml",
         "views/import_wizard_views.xml"
     ],
-
     "installable": True,
     "application": True
 }

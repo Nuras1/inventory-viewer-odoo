@@ -1,7 +1,6 @@
 from odoo import models, fields
 import requests
 
-
 class InventoryImportWizard(models.TransientModel):
     _name = "inventory.import.wizard"
     _description = "Import Inventory"
