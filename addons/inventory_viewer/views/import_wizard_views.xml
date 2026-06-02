@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <odoo>
 
     <record id="inventory_import_wizard_form"
@@ -13,8 +12,7 @@
             inventory.import.wizard
         </field>
 
-        <field name="arch"
-               type="xml">
+        <field name="arch" type="xml">
 
             <form string="Import Inventory">
 
@@ -26,9 +24,9 @@
 
                 <footer>
 
-                    <button string="Import"
+                    <button name="action_import"
+                            string="Import"
                             type="object"
-                            name="action_import"
                             class="btn-primary"/>
 
                     <button string="Cancel"
@@ -38,6 +36,27 @@
 
             </form>
 
+        </field>
+
+    </record>
+
+    <record id="inventory_import_action"
+            model="ir.actions.act_window">
+
+        <field name="name">
+            Import Inventory
+        </field>
+
+        <field name="res_model">
+            inventory.import.wizard
+        </field>
+
+        <field name="view_mode">
+            form
+        </field>
+
+        <field name="target">
+            new
         </field>
 
     </record>
